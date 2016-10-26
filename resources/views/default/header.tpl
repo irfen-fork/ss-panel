@@ -10,7 +10,6 @@
     <link href="//fonts.lug.ustc.edu.cn/icon?family=Material+Icons" rel="stylesheet">
     <link href="/assets/materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="/assets/materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<script type='text/javascript' src="http://ocv8pgna3.bkt.clouddn.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
 	<script type='text/javascript' src="http://ocv8pgna3.bkt.clouddn.com/easyss/js/materialize.min.js"></script>
 	
 <style>
