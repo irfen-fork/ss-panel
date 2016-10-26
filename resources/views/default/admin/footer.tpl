@@ -2,8 +2,8 @@
     <div class="pull-right hidden-xs">
         Made with Love
     </div>
-    <strong>Copyright &copy; 2016 <a href="#">{$config['appName']}</a> </strong>
-    All rights reserved. Powered by <b>ss-panel</b> {$config['version']} | <a href="/tos">服务条款 </a>
+    <strong>Copyright &copy; 2016 - 2017 <a href="#">{$config['appName']}</a> </strong>
+    All rights reserved. | <a href="http://irfen.me" target="_blank">去我博客 </a> | <a href="/tos">服务条款 </a>
 </footer>
 </div><!-- ./wrapper -->
 

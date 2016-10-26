@@ -36,9 +36,13 @@ class UserController extends BaseController
     {
         $msg = DbConfig::get('user-index');
         if ($msg == null) {
-            $msg = "在后台修改用户中心公告...";
+            $msg = "";
         }
-        return $this->view()->assign('msg', $msg)->display('user/index.tpl');
+		$contact = DbConfig::get('contact-info');
+		if ($contact == null) {
+            $contact = "";
+        }
+        return $this->view()->assign('msg', $msg)->assign('contact', $contact)->display('user/index.tpl');
     }
 
     public function node($request, $response, $args)
@@ -184,6 +188,10 @@ class UserController extends BaseController
             return $response->getBody()->write(json_encode($res));
         }
         $traffic = rand(Config::get('checkinMin'), Config::get('checkinMax'));
+		$trafficType = $this->user->traffic; // 每月流量数
+		if ($trafficType == 0 && $traffic > 20) {
+			$traffic = 20;
+		}
         $trafficToAdd = Tools::toMB($traffic);
         $this->user->transfer_enable = $this->user->transfer_enable + $trafficToAdd;
         $this->user->last_check_in_time = time();
@@ -219,9 +227,10 @@ class UserController extends BaseController
             return $this->echoJson($response, $res);
         }
         Auth::logout();
-        $user->delete();
+        //$user->delete();
         $res['ret'] = 1;
-        $res['msg'] = "GG!您的帐号已经从我们的系统中删除.";
+        // $res['msg'] = "GG!您的帐号已经从我们的系统中删除.";
+		$res['msg'] = "没有删除功能啊";
         return $this->echoJson($response, $res);
     }
 

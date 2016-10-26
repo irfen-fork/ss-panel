@@ -40,31 +40,37 @@
                                 <input type="text" class="form-control" placeholder="Enter ..." id="app-name"
                                        value="{$conf['app-name']}">
                             </div>
-
-                            <div class="form-group">
-                                <label>统计代码</label>
-                                <textarea class="form-control" id="analytics-code" rows="3"
-                                          placeholder="Enter ...">{$conf['analytics-code']}</textarea>
+							<div class="form-group">
+                                <label>站点公告</label>
+                                <textarea class="form-control" id="home-index" rows="3"
+                                          placeholder="Enter ...">{$conf['home-index']}</textarea>
                             </div>
-
-                            <div class="form-group">
-                                <label>邀请页公告</label>
-                                <textarea class="form-control" id="home-code" rows="3"
-                                          placeholder="Enter ...">{$conf['home-code']}</textarea>
-                            </div>
-
-                            <div class="form-group">
+							<div class="form-group">
                                 <label>用户中心公告</label>
                                 <textarea class="form-control" id="user-index" rows="3"
                                           placeholder="Enter ...">{$conf['user-index']}</textarea>
                             </div>
-
-                            <div class="form-group">
+							<div class="form-group">
+                                <label>用户中心联系方式</label>
+                                <textarea class="form-control" id="contact-info" rows="3"
+                                          placeholder="Enter ...">{$conf['contact-info']}</textarea>
+                            </div>
+							
+                            <div class="form-group" style="display:none;">
+                                <label>统计代码</label>
+                                <textarea class="form-control" id="analytics-code" rows="3"
+                                          placeholder="Enter ...">{$conf['analytics-code']}</textarea>
+                            </div>
+                            <div class="form-group" style="display:none;">
+                                <label>邀请页公告</label>
+                                <textarea class="form-control" id="home-code" rows="3"
+                                          placeholder="Enter ...">{$conf['home-code']}</textarea>
+                            </div>
+                            <div class="form-group" style="display:none;">
                                 <label>用户节点公告</label>
                                 <textarea class="form-control" id="user-node" rows="3"
                                           placeholder="Enter ...">{$conf['user-node']}</textarea>
                             </div>
-
                         </form>
                     </div>
                     <!-- /.box-body -->
@@ -100,10 +106,13 @@
                 url: "/admin/config",
                 dataType: "json",
                 data: {
+                    appName: $("#app-name").val(),
+					homeIndex: $("#home-index").val(),
+                    userIndex: $("#user-index").val(),
+					contactInfo: $("#contact-info").val(),
+					
                     analyticsCode: $("#analytics-code").val(),
                     homeCode: $("#home-code").val(),
-                    appName: $("#app-name").val(),
-                    userIndex: $("#user-index").val(),
                     userNode: $("#user-node").val()
                 },
                 success: function (data) {

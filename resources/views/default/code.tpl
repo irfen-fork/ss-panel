@@ -3,8 +3,8 @@
     <div class="container">
         <br><br>
         <div class="row center">
-            <h5>邀请码实时刷新</h5>
-            <h5>如遇到无邀请码请找已经注册的用户获取。</h5>
+            <h5>这里提供的邀请码都是0G流量邀请码，需要靠每日签到获取流量。</h5>
+            <h5>如需获取更多流量试用，请发邮件至irfen@vip.qq.com获取</h5>
             {$msg}
         </div>
     </div>
@@ -26,9 +26,9 @@
                         </tr>
                         </thead>
                         <tbody>
-                        {foreach $codes as $code}
+                        {foreach from = $codes item = code name = foo}
                             <tr>
-                                <td>{$code->id}</td>
+                                <td>{$smarty.foreach.foo.index}</td>
                                 <td><a href="/auth/register?code={$code->code}">{$code->code}</a></td>
                                 <td>可用</td>
                             </tr>

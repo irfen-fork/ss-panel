@@ -97,6 +97,32 @@ class AuthController extends BaseController
         $repasswd = $request->getParam('repasswd');
         $code = $request->getParam('code');
         $verifycode = $request->getParam('verifycode');
+		$trafficTypeStr = substr($code,7,1);
+		$trafficType = intval($trafficTypeStr);
+		$traffic = 0;
+		switch ($trafficType) {
+			case 0:
+				$traffic = 0;
+				break;
+			case 1:
+				$traffic = 5;
+				break;
+			case 2:
+				$traffic = 20;
+				break;
+			case 3:
+				$traffic = 50;
+				break;
+			case 4:
+				$traffic = 200;
+				break;
+			case 5:
+				$traffic = 500;
+				break;
+			default:
+				$traffic = 0;
+				break;
+		}
 
         // check code
         $c = InviteCode::where('code', $code)->first();
@@ -165,10 +191,14 @@ class AuthController extends BaseController
         $user->t = 0;
         $user->u = 0;
         $user->d = 0;
-        $user->transfer_enable = Tools::toGB(Config::get('defaultTraffic'));
+        $user->transfer_enable = Tools::toGB($traffic);
+		if ($traffic == 0) {
+			$user->transfer_enable = Tools::toMB(Config::get('defaultTraffic'));
+		}
         $user->invite_num = Config::get('inviteNum');
         $user->reg_ip = Http::getClientIP();
         $user->ref_by = $c->user_id;
+		$user->traffic = $traffic;
 
         if ($user->save()) {
             $res['ret'] = 1;

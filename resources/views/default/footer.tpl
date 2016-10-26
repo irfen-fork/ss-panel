@@ -30,8 +30,7 @@
 	</div>
 	<div class="footer-copyright">
 		<div class="container">
-			&copy; {$config["appName"]}  Powered by <a class="orange-text text-lighten-3" href="https://github.com/orvice/ss-panel">ss-panel</a> {$config["version"]}
-		 Theme by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+			&copy; 2016 - 2017 {$config["appName"]} | <a class="orange-text text-lighten-3" href="http://irfen.me" target="_blank">去我的博客</a>
 		</div>
 		<div style="display:none;">
 			{$analyticsCode}

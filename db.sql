@@ -1,5 +1,5 @@
 SET NAMES utf8;
-SET time_zone = '+00:00';
+SET time_zone = '+08:00';
 SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
@@ -105,7 +105,7 @@ CREATE TABLE `user` (
   `last_get_gift_time` int(11) NOT NULL DEFAULT '0',
   `last_check_in_time` int(11) NOT NULL DEFAULT '0',
   `last_rest_pass_time` int(11) NOT NULL DEFAULT '0',
-  `reg_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `reg_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `invite_num` int(8) NOT NULL DEFAULT '0',
   `is_admin` int(2) NOT NULL DEFAULT '0',
   `ref_by` int(11) NOT NULL DEFAULT '0',
@@ -165,5 +165,13 @@ CREATE TABLE `sp_email_verify` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `sp_email_verify`;
+CREATE TABLE `sp_email_verify` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(32) NOT NULL,
+  `token` varchar(64) NOT NULL,
+  `expire_at` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 

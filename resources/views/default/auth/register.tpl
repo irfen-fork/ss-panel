@@ -7,6 +7,8 @@
 
     <div class="register-box-body">
         <p class="login-box-msg">注册，然后变成一只猫。</p>
+		<p class="login-box-msg">如果没有看到邮件验证码，去垃圾箱看看。</p>
+		<p class="login-box-msg">尽量不要用QQ邮箱，基本上很难收到验证码。</p>
 
         <div class="form-group has-feedback">
             <input type="text" id="name" class="form-control" placeholder="昵称"/>

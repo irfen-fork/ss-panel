@@ -29,14 +29,14 @@
                 </div>
                 <!-- /.box -->
             </div>
-            <!-- /.col (right) -->
+            <!-- /.col (left) -->
 
             <div class="col-md-6">
                 <div class="box box-primary">
                     <div class="box-header">
                         <i class="fa fa-exchange"></i>
 
-                        <h3 class="box-title">流量使用情况</h3>
+                        <h3 class="box-title">本月流量使用情况</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -64,9 +64,52 @@
                 </div>
                 <!-- /.box -->
             </div>
+            <!-- /.col (right) -->
+
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <i class="fa fa-phone"></i>
+
+                        <h3 class="box-title">联系我</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        {$contact}
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
             <!-- /.col (left) -->
 
             <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <i class="fa  fa-paper-plane"></i>
+
+                        <h3 class="box-title">连接信息</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <dl class="dl-horizontal">
+                            <dt>端口</dt>
+                            <dd>{$user->port}</dd>
+                            <dt>密码</dt>
+                            <dd>{$user->passwd}</dd>
+                            <dt>自定义加密方式</dt>
+                            <dd>{$user->method}</dd>
+                            <dt>上次使用</dt>
+                            <dd>{$user->lastSsTime()}</dd>
+                        </dl>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col (right) -->
+			
+			<div class="col-md-6">
                 <div class="box box-primary">
                     <div class="box-header">
                         <i class="fa fa-pencil"></i>
@@ -91,26 +134,22 @@
                 </div>
                 <!-- /.box -->
             </div>
-            <!-- /.col (right) -->
-
+            <!-- /.col (left) -->
+			
             <div class="col-md-6">
                 <div class="box box-primary">
                     <div class="box-header">
-                        <i class="fa  fa-paper-plane"></i>
+                        <i class="fa fa-shopping-cart"></i>
 
-                        <h3 class="box-title">连接信息</h3>
+                        <h3 class="box-title">付费购买流量过期时间</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
                         <dl class="dl-horizontal">
-                            <dt>端口</dt>
-                            <dd>{$user->port}</dd>
-                            <dt>密码</dt>
-                            <dd>{$user->passwd}</dd>
-                            <dt>自定义加密方式</dt>
-                            <dd>{$user->method}</dd>
-                            <dt>上次使用</dt>
-                            <dd>{$user->lastSsTime()}</dd>
+                            <dt>每月总流量</dt>
+                            <dd>{$user->totalGB()}GB</dd>
+                            <dt>付费过期时间</dt>
+                            <dd>{$user->vipEndTime()}</dd>
                         </dl>
                     </div>
                     <!-- /.box-body -->

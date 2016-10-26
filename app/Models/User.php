@@ -34,7 +34,7 @@ class User extends Model
      *
      * @var array
      */
-    protected $hidden = ['pass', 'last_get_gift_time', 'last_rest_pass_time', 'reg_ip', 'is_email_verify', 'user_name', 'ref_by', 'is_admin'];
+    protected $hidden = ['pass', 'last_get_gift_time', 'last_rest_pass_time', 'reg_ip', 'is_email_verify', 'user_name', 'ref_by', 'is_admin', 'type'];
 
     public function getGravatarAttribute()
     {
@@ -62,6 +62,19 @@ class User extends Model
         }
         return Tools::toDateTime($this->attributes['last_check_in_time']);
     }
+	
+	public function vipEndTime()
+    {
+        if ($this->attributes['vip_end_time'] == 0) {
+            return "永久";
+        }
+        return Tools::toDateTime($this->attributes['vip_end_time']);
+    }
+	
+	public function totalGB()
+	{
+		return $this->traffic;
+	}
 
     public function regDate()
     {
