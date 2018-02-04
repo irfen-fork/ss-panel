@@ -68,7 +68,7 @@ $(document).ready(function(){
 					<strong>5GB</strong>/Mo
 				</div>
 				<h3 class="monthly"><sup>￥</sup>8<small>/Mo</small></h3>
-				<h6 class="year">(60/Yr)</h6>
+				<h6 class="year">(50/Yr)</h6>
 				<ul class="details">
 					<li>
 						<div class="row-content">
@@ -95,7 +95,7 @@ $(document).ready(function(){
 					<strong>20GB</strong>/Mo
 				</div>
 				<h3 class="monthly"><sup>￥</sup>10<small>/Mo</small></h3>
-				<h6 class="year">(90/Yr)</h6>
+				<h6 class="year">(80/Yr)</h6>
 				<ul class="details">
 					<li>
 						<div class="row-content">
