@@ -3,11 +3,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <title>{$config["appName"]} 科学上网 提供免费SS上网账号 梯子 轻松上谷歌 免费ss帐号</title>
-	<meta name="description" content="EASY SS致力于提供专业靠谱的Shadowsocks帐号（ss帐号）服务极速而不失稳定，同时支持电脑、手机和平板，提供免费科学上网帐号，提供免费SS上网账号，梯子，轻松访问谷歌">
-	<meta name="keywords" content="shadowsocks,ss,ss帐号,shadowsocks帐号,影梭,购买SS,ss免费帐号" />
+    <title>{$config["appName"]} 安全上网</title>
+	<meta name="description" content="EASY SS">
+	<meta name="keywords" content="" />
     <!-- CSS fonts.googleapis.com -->
-    <link href="//fonts.lug.ustc.edu.cn/icon?family=Material+Icons" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
     <link href="/assets/materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="/assets/materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<script type='text/javascript' src="http://ocv8pgna3.bkt.clouddn.com/easyss/js/jquery.min.js"></script>
